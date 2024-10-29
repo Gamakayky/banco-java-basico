@@ -4,31 +4,31 @@ public class Executavel {
 
 	public static void main(String[] args) {
 
-		Conta contaKayky = new Conta();
+		Conta contaKayky = new Conta(00345, "Kayky gama", "47133467890");
 		contaKayky.nomeCliente = "Kayky";
-		Conta contaGama = new Conta();
-		contaGama.nomeCliente = "Gama";
+		Conta contaFilipeGama = new Conta(45678, "filipe Gama", "22456789055");
+		contaFilipeGama.nomeCliente = "Gama";
 
 		contaKayky.depositar(10000);
-		contaGama.depositar(10000);
+		contaFilipeGama.depositar(10000);
 
 		contaKayky.sacar(5000);
-		contaGama.sacar(2000);
+		contaFilipeGama.sacar(2000);
 
 		contaKayky.exibirSaldo();
-		contaGama.exibirSaldo();
+		contaFilipeGama.exibirSaldo();
 		
-		contaKayky.transferir(contaGama, 4999);
+		contaKayky.transferir(contaFilipeGama, 4999);
 		
 		contaKayky.sacar(10);
 		
 		contaKayky.exibirSaldo();
-		contaGama.exibirSaldo();
+		contaFilipeGama.exibirSaldo();
 		
-		contaGama.transferir(contaKayky, 99);
+		contaFilipeGama.transferir(contaKayky, 99);
 		
 		contaKayky.exibirSaldo();
-		contaGama.exibirSaldo();
+		contaFilipeGama.exibirSaldo();
 		
 
 	}

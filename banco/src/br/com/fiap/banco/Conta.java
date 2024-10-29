@@ -7,6 +7,13 @@ public class Conta {
 	long numeroConta;
 	double saldo;
 
+	public Conta(long numeroConta, String nomeCliente, String cpfCliente) {
+		this.numeroConta = numeroConta;
+		this.nomeCliente = nomeCliente;
+		this.cpfCliente = cpfCliente;
+		System.out.println("Conta " + this.nomeCliente + " criada!");
+	}
+
 	public boolean sacar(double valor) {
 		if (this.saldo >= valor) {
 			saldo = saldo - valor;
