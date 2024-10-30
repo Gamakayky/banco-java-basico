@@ -51,4 +51,37 @@ public class Conta {
 		System.out.println("--------");
 	}
 
+	public long getNumeroConta() {
+		return numeroConta;
+	}
+
+	public void setNumeroConta(long numeroConta) {
+		this.numeroConta = numeroConta;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public Date getAberturaConta() {
+		return aberturaConta;
+	}
+
+	public void setAberturaConta(Date aberturaConta) {
+		this.aberturaConta = aberturaConta;
+	}
+	
+	
 }
