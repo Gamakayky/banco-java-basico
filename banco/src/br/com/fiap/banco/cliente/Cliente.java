@@ -1,4 +1,4 @@
-package br.com.fiap.banco;
+package br.com.fiap.banco.cliente;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

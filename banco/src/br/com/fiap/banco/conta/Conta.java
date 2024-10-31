@@ -1,8 +1,10 @@
-package br.com.fiap.banco;
+package br.com.fiap.banco.conta;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import br.com.fiap.banco.cliente.Cliente;
 
 public abstract class Conta {
 

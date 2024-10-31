@@ -1,4 +1,4 @@
-package br.com.fiap.banco;
+package br.com.fiap.banco.produto;
 
 public class LCA implements Produto {
 

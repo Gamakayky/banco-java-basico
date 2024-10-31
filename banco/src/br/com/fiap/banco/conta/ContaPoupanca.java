@@ -1,4 +1,6 @@
-package br.com.fiap.banco;
+package br.com.fiap.banco.conta;
+
+import br.com.fiap.banco.cliente.Cliente;
 
 public class ContaPoupanca extends Conta {
 

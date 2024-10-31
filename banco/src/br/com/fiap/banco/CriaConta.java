@@ -1,7 +1,10 @@
 package br.com.fiap.banco;
 
-import br.com.fiap.banco.Cliente;
-import br.com.fiap.banco.ContaCorrente;
+import br.com.fiap.banco.cliente.Cliente;
+import br.com.fiap.banco.conta.ContaCorrente;
+import br.com.fiap.banco.produto.CDB;
+import br.com.fiap.banco.produto.LCA;
+import br.com.fiap.banco.produto.LCI;
 
 public class CriaConta {
 

@@ -1,4 +1,7 @@
-package br.com.fiap.banco;
+package br.com.fiap.banco.conta;
+
+import br.com.fiap.banco.cliente.Cliente;
+import br.com.fiap.banco.produto.Produto;
 
 public class ContaCorrente extends Conta {
 
