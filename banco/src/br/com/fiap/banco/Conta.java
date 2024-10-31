@@ -1,14 +1,15 @@
 package br.com.fiap.banco;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Conta {
+public abstract class Conta {
 
-	private long numeroConta;
-	private double saldo;
-	private Cliente cliente;
-	private Date aberturaConta = new Date();
+	protected long numeroConta;
+	protected double saldo;
+	protected Cliente cliente;
+	protected Date aberturaConta = new Date();
 
 	public Conta(long numeroConta, double saldo, Cliente cliente, String aberturaConta) {
 		this.numeroConta = numeroConta;
@@ -33,7 +34,7 @@ public class Conta {
 	}
 
 	public void depositar(double valor) {
-		this.saldo = saldo + valor;
+		saldo = saldo + valor;
 
 	}
 
@@ -43,45 +44,6 @@ public class Conta {
 		}
 	}
 
-	public void exibirSaldo() {
-		System.out.println("Numero conta: " + this.numeroConta);
-		System.out.println("Cliente: " + this.cliente.getNomeCliente());
-		System.out.println("Saldo: " + this.saldo);
-		System.out.println("Data de abertura da conta: " + this.aberturaConta);
-		System.out.println("--------");
-	}
+	public abstract void exibirSaldo();
 
-	public long getNumeroConta() {
-		return numeroConta;
-	}
-
-	public void setNumeroConta(long numeroConta) {
-		this.numeroConta = numeroConta;
-	}
-
-	public double getSaldo() {
-		return saldo;
-	}
-
-	public void setSaldo(double saldo) {
-		this.saldo = saldo;
-	}
-
-	public Cliente getCliente() {
-		return cliente;
-	}
-
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}
-
-	public Date getAberturaConta() {
-		return aberturaConta;
-	}
-
-	public void setAberturaConta(Date aberturaConta) {
-		this.aberturaConta = aberturaConta;
-	}
-	
-	
 }
