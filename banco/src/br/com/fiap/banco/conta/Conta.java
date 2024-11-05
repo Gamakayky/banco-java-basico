@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import br.com.fiap.banco.SaldoInsuficiente;
 import br.com.fiap.banco.cliente.Cliente;
 
 public abstract class Conta {
@@ -27,12 +28,14 @@ public abstract class Conta {
 		}
 	}
 
-	public boolean sacar(double valor) {
+	public boolean sacar(double valor) throws SaldoInsuficiente {
 		if (this.saldo >= valor) {
 			saldo = saldo - valor;
 			return true;
+		} else {
+			throw new SaldoInsuficiente("Saldo insuficiente");
 		}
-		return false;
+
 	}
 
 	public void depositar(double valor) {
@@ -40,7 +43,7 @@ public abstract class Conta {
 
 	}
 
-	public void transferir(Conta conta, double valor) {
+	public void transferir(Conta conta, double valor) throws SaldoInsuficiente {
 		if (this.sacar(valor)) {
 			conta.depositar(valor);
 		}

@@ -1,5 +1,6 @@
 package br.com.fiap.banco.conta;
 
+import br.com.fiap.banco.SaldoInsuficiente;
 import br.com.fiap.banco.cliente.Cliente;
 import br.com.fiap.banco.produto.Produto;
 
@@ -12,7 +13,7 @@ public class ContaCorrente extends Conta {
 
 	}
 
-	public void investimento(Produto produto, double valor) { // polimorfismo
+	public void investimento(Produto produto, double valor) throws SaldoInsuficiente { // polimorfismo
 		if (this.sacar(valor)) {
 			saldoInvestimento += produto.investir(valor);
 		}
